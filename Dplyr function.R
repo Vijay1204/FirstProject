@@ -21,7 +21,7 @@ filter(mtcars, between(row_number(), 5, n()-2))
 
 
 #mutate----
-mutate(mtcars, displ_l = disp / 61.0237) #keeps other col
+mutate(mtcars, displ_l = disp / 61.0237) #keeps other col and add a new column and can give the function of that column
 transmute(mtcars, displ_l = disp / 61.0237) #removes other cols
 mutate(mtcars, cyl = NULL) #do not display cyl
 
@@ -51,7 +51,7 @@ summarise(group_by(mtcars, cyl), mean(disp))
 summarise(group_by(mtcars, cyl), m = mean(disp), sd = sd(disp))
 
 
-#summarise_all
+#summarise_all#used to subgrp the content and then find the necessary means etc.
 mtcars %>% group_by(am, gear) %>% summarise_all(mean)
 mtcars %>% group_by(am, gear)%>% summarise_all(c("min", "max"))
 mtcars %>% group_by(am, gear)%>% summarise_all(funs(med = median))
