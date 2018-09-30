@@ -104,6 +104,7 @@ x[4]
 (x = rnorm(100))
 plot(density(x))
 mean(x)
+distribution()#gives the list of all possible distributions 
 (x1 = rnorm(1000000, mean=50, sd=5))
 plot(density(x1))
 abline(v=mean(x1),h=0.04)
@@ -200,7 +201,7 @@ addmargins(m1,c(1,2),mean) #row & col wise function
 
 addmargins(m1,c(1,2),list(list(mean,sum,max), list(var,sd))) #row & col wise function
 
-
+#dataframa name $gender=factor(dataframa name $gender)
 #Array-----
 length(100:123)
 4*3*2
