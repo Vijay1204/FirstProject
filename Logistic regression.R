@@ -20,11 +20,11 @@ dataset$gender = factor(dataset$gender)
 
 
 # Split the dataset into the Training set and Test set
-#install.packages('caTools')
+install.packages('caTools')
 library(caTools)
 set.seed(2000)
 
-split = sample.split(dataset$purchased, SplitRatio = 0.75)
+split = sample.splitwamplr(dataset$purchased, SplitRatio = 0.75)
 training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
